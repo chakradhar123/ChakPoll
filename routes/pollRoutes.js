@@ -41,7 +41,7 @@ router.post('/', middleware.isLoggedIn, (req, res) => {
 						console.log(err);
 					});
 			});
-			res.redirect('/polls');
+			res.redirect('/users/' + req.user._id);
 		})
 		.catch(err => {
 			console.log(err);
